@@ -223,7 +223,7 @@ You will now change your existing python training code to use Hyperparameter Tun
 
 1. Open the file Lab3/Source/train.py with your favorite text editor.
 
-2. Go to line 136 and change the variabel **no\_hyper\_parameter\_tuning** to **False** and save the changes
+2. Go to line 136 and change the variable **no\_hyper\_parameter\_tuning** to **False** and save the changes
 
    ```python
    no_hyper_parameter_tuning = False
