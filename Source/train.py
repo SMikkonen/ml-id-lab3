@@ -133,7 +133,7 @@ fm = sagemaker.estimator.Estimator(containers[boto3.Session().region_name],
                                    base_job_name=job_name,
                                    sagemaker_session=sagemaker.Session())
 
-no_hyper_parameter_tuning = False
+no_hyper_parameter_tuning = True
 
 if (no_hyper_parameter_tuning):
     #
@@ -186,6 +186,7 @@ config_data_qa = {
         "CommitID": commit_id,
         "Environment": "qa",
         "ParentStackName": stack_name,
+        "SageMakerRole": role,
         "ModelData": best_model,
         "ContainerImage": containers[boto3.Session().region_name],
         "Timestamp": current_timestamp
@@ -199,6 +200,7 @@ config_data_prod = {
         "CommitID": commit_id,
         "Environment": "prod",
         "ParentStackName": stack_name,
+        "SageMakerRole": role,
         "ModelData": best_model,
         "ContainerImage": containers[boto3.Session().region_name],
         "Timestamp": current_timestamp
